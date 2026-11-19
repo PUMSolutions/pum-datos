@@ -1,0 +1,34 @@
+name: Mercado RLUSD y XRP
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: market
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Descargar datos de CoinGecko
+        run: python3 scripts/market.py
+      - name: Guardar si cambió
+        run: |
+          git config user.name "pum-datos bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add market.json market.js
+          if git diff --cached --quiet; then echo "sin cambios"; exit 0; fi
+          git commit -m "Mercado RLUSD y XRP $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push
+      - name: Refrescar caché de jsDelivr
+        run: |
+          curl -fsS "https://purge.jsdelivr.net/gh/PUMSolutions/pum-datos@main/market.js" || true
+          curl -fsS "https://purge.jsdelivr.net/gh/PUMSolutions/pum-datos@main/market.json" || true
