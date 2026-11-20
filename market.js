@@ -1,1 +1,1 @@
-window.__PUM_MARKET={"rlusd_mcap": 2825679007.7281227, "rlusd_price": 0.999964, "xrp_price": 0.945164, "xrp_mcap": 60052311758.74134, "xrp_change_24h": -4.187999986656816, "updated_at": "2026-11-20T12:14:33Z", "source": "CoinGecko"};window.dispatchEvent(new Event('pum-market'));
+window.__PUM_MARKET={"rlusd_mcap": 2855092815.846975, "rlusd_price": 1.0, "xrp_price": 0.892746, "xrp_mcap": 56718907522.36204, "xrp_change_24h": -6.896580421940003, "updated_at": "2026-11-20T20:31:14Z", "source": "CoinGecko"};window.dispatchEvent(new Event('pum-market'));
