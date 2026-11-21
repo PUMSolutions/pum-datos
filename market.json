@@ -1,9 +1,9 @@
 {
-  "rlusd_mcap": 2874249495.6310754,
+  "rlusd_mcap": 2874033712.495624,
   "rlusd_price": 1.0,
-  "xrp_price": 0.905971,
-  "xrp_mcap": 57555397773.316864,
-  "xrp_change_24h": -5.915616601666087,
-  "updated_at": "2026-11-21T01:44:20Z",
+  "xrp_price": 0.888489,
+  "xrp_mcap": 56484140981.1933,
+  "xrp_change_24h": -7.619816967587448,
+  "updated_at": "2026-11-21T08:52:07Z",
   "source": "CoinGecko"
 }
